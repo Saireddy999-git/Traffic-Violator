@@ -237,7 +237,7 @@ const App: React.FC = () => {
         </header>
 
         <div className="max-w-7xl mx-auto">
-          {activeTab === 'dashboard' && <Dashboard />}
+          {activeTab === 'dashboard' && <Dashboard onLogout={handleLogout} />}
           {activeTab === 'upload' && <UploadSection user={currentUser} />}
           {activeTab === 'history' && <ViolationHistory isAdmin={currentUser.role === UserRole.ADMIN} />}
           {activeTab === 'reports' && <ReportsLog />}
