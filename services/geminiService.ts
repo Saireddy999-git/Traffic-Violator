@@ -7,7 +7,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const analyzeTrafficMedia = async (base64Media: string, mimeType: string): Promise<DetectionResult> => {
   // Use gemini-3-pro-preview for complex multimodal tasks involving OCR and traffic violation reasoning.
-  const model = "gemini-3-pro-preview";
+  const model = "gemini-2.0-flash";
   
   const systemInstruction = `
     You are an expert Traffic Enforcement AI. Your task is to analyze traffic CCTV footage (images or videos).
